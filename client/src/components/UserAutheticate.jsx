@@ -1,12 +1,12 @@
 // Authentication.js
 
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import LoginForm from "../pages/Login";
 import SignUpForm from "../pages/SignUp";
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from "../context/AuthContext";
 
 const Authentication = () => {
-   const {swap}=useContext(AuthContext)
+  const { swap } = useContext(AuthContext);
 
   return (
     <div className="relative flex flex-col md:flex-row min-h-screen">
@@ -16,14 +16,14 @@ const Authentication = () => {
           alt="SpaceX"
           className="w-full h-full object-cover"
         />
-         <p className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 text-center z-10 md:text-lg lg:text-xl xl:text-2xl">
-          Exploring the Cosmos: SpaceX - Pioneering Advanced Rockets and Spacecraft
+        <p className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 text-center z-10 md:text-lg lg:text-xl xl:text-2xl">
+          Exploring the Cosmos: SpaceX - Pioneering Advanced Rockets and
+          Spacecraft
         </p>
       </div>
       <div className="md:w-1/2 flex items-center justify-center p-8">
         <div className="max-w-md w-full">
-          {swap?<SignUpForm />:
-          <LoginForm />}
+          {swap ? <SignUpForm /> : <LoginForm />}
         </div>
       </div>
     </div>
