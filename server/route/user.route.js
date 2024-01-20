@@ -6,16 +6,14 @@ require("dotenv").config()
 const { userModel } = require("../model/user.model");
 
 
-userRouter.post("/register",async(req,res)=>{
+userRouter.post("/signup",async(req,res)=>{
    try {
-    const {name,username,email,phone,password}=req.body;
+    const {name,email,password}=req.body;
 
      // Check for missing fields
   const missingFields = [];
   if (!name) missingFields.push('name');
-  if (!username) missingFields.push('username');
   if (!email) missingFields.push('email');
-  if (!phone) missingFields.push('phone');
   if (!password) missingFields.push('password');
 
   // If any fields are missing, return an error
@@ -34,7 +32,7 @@ userRouter.post("/register",async(req,res)=>{
             return res.status(400).json({msg:err.message})
         }
         else{
-            const newuser= new userModel({name,username,email,phone,password:hash});
+            const newuser= new userModel({name,email,password:hash});
             await newuser.save();
             return res.status(200).json({msg:"Registered successfully"})
         }
@@ -72,7 +70,7 @@ userRouter.post("/login",async(req,res)=>{
 
             }
             else{
-                return res.status(400).json({error:"Wrong credential"})
+                return res.status(400).json({msg:"Wrong credential"})
             }
         })
     
