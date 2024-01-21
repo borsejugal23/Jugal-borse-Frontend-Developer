@@ -5,15 +5,15 @@ import { AuthContext } from "../context/AuthContext";
 import { useDispatch } from "react-redux";
 import { login } from "../Redux/AuthReducer/action";
 import { useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const toast = useToast();
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
 
   const dispatch = useDispatch();
   const { toggle } = useContext(AuthContext);
@@ -29,6 +29,7 @@ const LoginForm = () => {
   };
 
   const handelcallback = (data) => {
+    console.log(data);
     if (data.token) {
       toast({
         position: "top",
@@ -37,6 +38,7 @@ const LoginForm = () => {
         duration: 3000,
         isClosable: true,
       });
+      return navigate("/spacex");
     } else {
       toast({
         position: "top",
