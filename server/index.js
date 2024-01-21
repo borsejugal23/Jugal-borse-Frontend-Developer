@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use("/users",userRouter);
-app.use("/rockets",capsuleRouter)
+app.use("/spacex",capsuleRouter)
 const port =process.env.port || 3001
 app.listen(port,async()=>{
     await connection
