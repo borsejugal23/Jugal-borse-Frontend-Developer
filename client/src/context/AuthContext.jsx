@@ -1,20 +1,24 @@
 import { createContext } from "react";
 import { useState } from "react";
 
-export const AuthContext=createContext()
+export const AuthContext = createContext();
 
+function AuthContextProvider({ children }) {
+  const [swap, setSwap] = useState(false);
+  const [isAuth, setAuth] = useState(false);
 
-function AuthContextProvider({children}) {
-    const [swap,setSwap]=useState(false);
-   
+  const toggle = () => {
+    setSwap((p) => !p);
+  };
 
-    const toggle=()=>{
-        setSwap(p=>!p)
-    }
-    
-    return <AuthContext.Provider  value={{swap,toggle}}>
-        {children}
+  const handleAuth = () => {
+    setAuth((isAuth) => !isAuth);
+  };
+  return (
+    <AuthContext.Provider value={{ swap, toggle, isAuth, handleAuth }}>
+      {children}
     </AuthContext.Provider>
+  );
 }
 
 export default AuthContextProvider;

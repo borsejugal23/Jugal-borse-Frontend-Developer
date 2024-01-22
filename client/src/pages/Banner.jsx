@@ -1,5 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 const Banner = () => {
+  const { handleAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
+  // const logout = () => {
+  //   console.log("logout")
+  //   return navigate("/");
+  // };
+
+  const handleLogout = () => {
+    handleAuth();
+    localStorage.removeItem("token");
+    navigate("/");
+    window.location.reload();
+  };
+
   return (
     <>
       <nav className="bg-black shadow-sm  p-4 flex justify-between items-center">
@@ -8,7 +24,10 @@ const Banner = () => {
           src="https://spacex-ships-bsf.netlify.app/spacex-logo.jpg"
           alt=""
         />
-        <button className="text-white text-lg border border-x-white rounded px-2 py-1">
+        <button
+          className="text-white text-lg border border-x-white rounded px-2 py-1 cursor-pointer"
+          onClick={handleLogout}
+        >
           Logout
         </button>
       </nav>

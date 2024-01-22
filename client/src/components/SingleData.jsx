@@ -26,6 +26,7 @@ const SingleData = ({ data }) => {
       <div
         className="bg-white p-4 rounded-md shadow-md leading-loose"
         onClick={openModal}
+        
       >
         <h2 className="text-xl font-semibold mb-2">{capsule_id}</h2>
 
@@ -89,8 +90,8 @@ const SingleData = ({ data }) => {
               <span className="text-stone-50">Name</span>
               <span className="text-stone-50">Flight</span>
             </div>
-            {missions?.map((item) => (
-              <div className="flex justify-around bg-neutral-100">
+            {missions?.map((item,i) => (
+              <div className="flex justify-around bg-neutral-100" key={i+1}>
                 <span>{item.name}</span>
                 <span>{item.flight}</span>
               </div>
