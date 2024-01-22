@@ -1,4 +1,4 @@
-## about 
+## About 
 SpaceX, a pioneering aerospace company, specializes in designing, manufacturing, and launching cutting-edge rockets and spacecraft, pushing the boundaries of space exploration and technology
 
 <h3 align="left">Languages and Tools:</h3>
