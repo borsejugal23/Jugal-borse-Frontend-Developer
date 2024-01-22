@@ -4,11 +4,10 @@ import {
   FETCH_DATA_SUCCESS,
 } from "../actionTypes";
 
-// const url = "https://api.spacexdata.com/v3/capsules";
-const url = "http://localhost:8080/spacex/capsules";
+const apiUrl = process.env.REACT_APP_API_URL;
+const url = `${apiUrl}/spacex/capsules`;
 
 export const FetchDataGrid = (query) => async (dispatch) => {
-  console.log(query);
   dispatch({ type: FETCH_DATA_REQUEST });
 
   try {

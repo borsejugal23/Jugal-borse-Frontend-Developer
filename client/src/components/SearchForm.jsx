@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FetchDataGrid } from "../Redux/ProductListReducer/action";
-import { useToast } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
 import SingleData from "./SingleData";
 export const SearchForm = () => {
-  const toast = useToast();
 
   const dispatch = useDispatch();
   const { isLoading, isError, data_Grid } = useSelector(
@@ -32,7 +30,6 @@ export const SearchForm = () => {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
-  console.log(isLoading, isError, data_Grid);
 
   return (
     <div>
@@ -77,7 +74,7 @@ export const SearchForm = () => {
         >
           Search
         </button>
-        {/* <button className="border-2 h-9 w-7 bg-black text-white rounded-md hover:bg-gray-800"> <FiRefreshCw className="size-5 text-neutral-100"/></button> */}
+       
       </div>
       {isLoading ? (
         <div className="flex justify-center items-center h-screen mt-[-10%] ">
