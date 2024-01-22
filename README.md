@@ -82,3 +82,20 @@ SpaceX, a pioneering aerospace company, specializes in designing, manufacturing,
 - Explore the live application on [Vercel](https://brainstormforce.vercel.app/spacex).
 
 
+## Application View
+
+
+
+## Landing Page
+![Screenshot 2024-01-22 121045](https://github.com/borsejugal23/Jugal-borse-Frontend-Developer/assets/115457172/481994b9-a0d8-4c6d-9b19-38519045ec7f)
+
+## Login Page
+
+![Screenshot 2024-01-22 120621](https://github.com/borsejugal23/Jugal-borse-Frontend-Developer/assets/115457172/818e7d82-bb97-44f8-8869-7afde486b430)
+
+## PopUP
+![Screenshot 2024-01-22 120550](https://github.com/borsejugal23/Jugal-borse-Frontend-Developer/assets/115457172/21d4568f-33aa-415c-8874-24668de23b41)
+
+
+
+
