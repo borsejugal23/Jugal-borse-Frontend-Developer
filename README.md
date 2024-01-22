@@ -75,5 +75,10 @@ SpaceX, a pioneering aerospace company, specializes in designing, manufacturing,
   - Incorporates modern UI elements and components to enhance the overall look and feel.
   - Utilizes tailwind CSS to add a touch of dynamism to the user interface.
 
+## Deployment
+
+- The application is deployed at [Cyclic](https://good-ruby-woodpecker-gown.cyclic.app).
+
+- Explore the live application on [Vercel](https://brainstormforce.vercel.app/spacex).
 
 
